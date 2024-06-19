@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Booleans</title>
+</head>
+<body>
+    <script>
+        function Numbers(start, end) {
+    for (let i = start; i <= end; i++) {
+        console.log(i);
+    }
+}
+
+function OddNumbers(start, end) {
+    for (let i = start; i <= end; i++) {
+        if (i % 2 !== 0) {
+            console.log(i);
+        }
+    }
+}
+
+function EvenNumbers(start, end) {
+    for (let i = start; i <= end; i++) {
+        if (i % 2 === 0) {
+            console.log(i);
+        }
+    }
+}
+// Example usage:
+let start = parseInt(prompt("Enter start number:"));
+let end = parseInt(prompt("Enter end number:"));
+
+console.log("Numbers from", start, "to", end);
+Numbers(start, end);
+
+console.log("Odd Numbers from", start, "to", end);
+OddNumbers(start, end);
+
+console.log("Even Numbers from", start, "to", end);
+EvenNumbers(start, end);
+
+
+function findPrimeNumbers(limit) {
+    let primes = [];
+
+    for (let num = 2; num < limit; num++) {
+        let isPrime = true;
+
+
+        for (let i = 2; i < num; i++) {
+            if (num % i === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime) {
+            primes.push(num);
+        }
+    }
+
+    return primes;
+}
+
+let primeNumbers = findPrimeNumbers(100);
+console.log("Prime numbers less than 100:", primeNumbers);
+
+    
+    </script>
+</body>
+</html>
